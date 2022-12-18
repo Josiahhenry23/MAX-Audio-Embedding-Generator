@@ -65,7 +65,7 @@ class Postprocessor(object):
             raise ValueError('Bad batch shape: %r' % embeddings_batch.shape)
 
         # Apply PCA.
-        # - Embeddings come in as [batch_size, embedding_size].
+        # - Embeds come in as [batch_size, embedding_size].
         # - Transpose to [embedding_size, batch_size].
         # - Subtract pca_means column vector from each column.
         # - Premultiply by PCA matrix of shape [output_dims, input_dims]

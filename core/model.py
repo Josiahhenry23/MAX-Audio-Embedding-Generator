@@ -60,7 +60,7 @@ class ModelWrapper(MAXModelWrapper):
         Input args:
             wav_file   = /path/to/audio/in/wav/format.wav
         Returns:
-                Embeddings.
+                Embeds.
         """
         examples_batch = vggish_input.wavfile_to_examples(wav_file)
         [embedding_batch] = self.session_embedding.run([self.embedding_tensor],
